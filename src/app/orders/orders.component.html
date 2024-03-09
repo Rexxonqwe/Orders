@@ -16,6 +16,7 @@
       data-bs-target="#offcanvasNavbar"
       aria-controls="offcanvasNavbar"
       aria-label="Toggle navigation"
+      (click)="toggleBTN()"
     >
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -32,6 +33,7 @@
           class="btn-close"
           data-bs-dismiss="offcanvas"
           aria-label="Close"
+          (click)="toggleBTN()"
         ></button>
       </div>
       <div class="offcanvas-body">
@@ -50,15 +52,15 @@
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-              Dropdown
+              Recent Orders
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Order</a></li>
+              <li><a class="dropdown-item" href="#">Another Order</a></li>
               <li>
                 <hr class="dropdown-divider" />
               </li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li><a class="dropdown-item" href="#">All Orders</a></li>
             </ul>
           </li>
         </ul>
@@ -113,5 +115,10 @@
   <div class="spacer"></div>
 </section>
 <div class="d-flex align-items-center p-3 fixed-bottom">
-  <button class="btn btn-dark btn-lg submit-btn">Place Order</button>
+  <button *ngIf="!showLogoutBTN" class="btn btn-dark btn-lg submit-btn">
+    Place Order
+  </button>
+  <button *ngIf="showLogoutBTN" class="btn btn-dark btn-lg submit-btn">
+    Sign Out
+  </button>
 </div>

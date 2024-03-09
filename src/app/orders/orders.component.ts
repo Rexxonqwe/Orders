@@ -9,6 +9,7 @@ import { OrdersService } from './orders.service';
 })
 export class OrdersComponent {
   public resourceBundle: any;
+  public showLogoutBTN = false;
 
   constructor(public ordersService: OrdersService){}
 
@@ -29,6 +30,10 @@ export class OrdersComponent {
         this.ordersService.products[i].qauntity++;
       }
     }
+  }
+
+  public toggleBTN(){
+    this.showLogoutBTN = !this.showLogoutBTN;
   }
   
 }
