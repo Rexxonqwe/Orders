@@ -7,9 +7,28 @@
 }
 
 .products-section{
-    height: 65vh;
+    height: 62vh;
+    border: none;
     overflow-x: scroll;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
+
+
 .submit-btn{
     width: 100%;
+}
+
+///////////////////**** UTILITY CLASSES ****/////////////////
+
+.spacer{
+    height: 45px;
+}
+.custom-font-8{
+    font-size: 14px;
+}
+
+.custom-btn{
+    cursor: pointer;
 }
